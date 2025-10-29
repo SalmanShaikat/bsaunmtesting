@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 export default function EventsGallery() {
   const events = [
     {
@@ -57,8 +55,6 @@ export default function EventsGallery() {
 
   return (
     <div className="min-h-screen bg-light">
-      <NavBar current="Events & Gallery" />
-      
       <header className="bg-white py-16">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl font-bold text-primary mb-4">Events & Gallery</h1>
@@ -69,7 +65,6 @@ export default function EventsGallery() {
       </header>
 
       <main className="container mx-auto px-6 py-16">
-        {/* Upcoming Events */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-primary mb-8">Upcoming Events</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -92,7 +87,6 @@ export default function EventsGallery() {
           </div>
         </section>
 
-        {/* Past Events */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-primary mb-8">Past Events</h2>
           <div className="grid md:grid-cols-3 gap-6">
@@ -112,7 +106,6 @@ export default function EventsGallery() {
           </div>
         </section>
 
-        {/* Photo Gallery */}
         <section>
           <h2 className="text-3xl font-bold text-primary mb-8">Photo Gallery</h2>
           <div className="grid md:grid-cols-3 gap-6">
