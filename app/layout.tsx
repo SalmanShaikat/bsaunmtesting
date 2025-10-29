@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import NavBar from './components/NavBar'
 
 export const metadata: Metadata = {
   title: 'BSA UNM - Bangladesh Student Association',
@@ -13,7 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <NavBar />
+        {children}
+      </body>
     </html>
   )
 }
