@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 export default function ActivitySupport() {
   const supportCategories = [
     {
@@ -73,8 +71,6 @@ export default function ActivitySupport() {
 
   return (
     <div className="min-h-screen bg-light">
-      <NavBar current="Activity & Support" />
-      
       <header className="bg-white py-16">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl font-bold text-primary mb-4">Activity & Support</h1>
@@ -85,7 +81,6 @@ export default function ActivitySupport() {
       </header>
 
       <main className="container mx-auto px-6 py-16">
-        {/* Support Services */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-primary mb-8">Support Services</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -110,7 +105,6 @@ export default function ActivitySupport() {
           </div>
         </section>
 
-        {/* Quick Help Section */}
         <section className="mb-16">
           <div className="bg-gradient-to-r from-accent to-accent-light rounded-2xl p-8 text-white">
             <h2 className="text-2xl font-bold mb-4">Need Immediate Help?</h2>
@@ -118,23 +112,22 @@ export default function ActivitySupport() {
               Our support team is available to assist you with any urgent matters.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
+              <a
                 href="mailto:support@bsa-unm.edu"
                 className="bg-white text-accent px-6 py-3 rounded-xl font-semibold transition-all duration-300 text-center hover:bg-gray-100"
               >
                 Email Support
-              </Link>
-              <Link 
+              </a>
+              <a
                 href="tel:+15051234567"
                 className="bg-primary text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 text-center hover:bg-primary/90"
               >
                 Call Emergency Line
-              </Link>
+              </a>
             </div>
           </div>
         </section>
 
-        {/* University Resources */}
         <section>
           <h2 className="text-3xl font-bold text-primary mb-8">University Resources</h2>
           <div className="grid md:grid-cols-2 gap-6">
