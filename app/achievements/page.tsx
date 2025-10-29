@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 export default function Achievements() {
   const individualAchievements = [
     {
@@ -61,8 +59,6 @@ export default function Achievements() {
 
   return (
     <div className="min-h-screen bg-light">
-      <NavBar current="Achievements" />
-      
       <header className="bg-white py-16">
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl font-bold text-primary mb-4">Achievements</h1>
@@ -73,7 +69,6 @@ export default function Achievements() {
       </header>
 
       <main className="container mx-auto px-6 py-16">
-        {/* Individual Achievements */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-primary mb-8">Individual Achievements</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -92,7 +87,6 @@ export default function Achievements() {
           </div>
         </section>
 
-        {/* Association Achievements */}
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-primary mb-8">Association Achievements</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -110,7 +104,6 @@ export default function Achievements() {
           </div>
         </section>
 
-        {/* Future Goals */}
         <section>
           <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 text-white">
             <h2 className="text-2xl font-bold mb-6">Our Future Goals</h2>
@@ -128,48 +121,5 @@ export default function Achievements() {
         </section>
       </main>
     </div>
-  )
-}
-
-// Reusable Navigation Component
-function NavBar({ current }: { current: string }) {
-  const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Faculty & Alumni', href: '/faculty-alumni' },
-    { name: 'Executive Committee', href: '/executive-committee' },
-    { name: 'Events & Gallery', href: '/events-gallery' },
-    { name: 'Activity & Support', href: '/activity-support' },
-    { name: 'Achievements', href: '/achievements' },
-  ]
-
-  return (
-    <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex justify-between items-center">
-          <Link href="/" className="flex items-center space-x-3 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-success rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold">BSA</span>
-            </div>
-            <span className="text-lg font-bold text-primary">BSA UNM</span>
-          </Link>
-          
-          <div className="flex space-x-6">
-            {navItems.map((item) => (
-              <Link 
-                key={item.name}
-                href={item.href}
-                className={`text-sm font-medium transition-colors duration-200 ${
-                  current === item.name 
-                    ? 'text-accent border-b-2 border-accent' 
-                    : 'text-secondary hover:text-accent'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-    </nav>
   )
 }
