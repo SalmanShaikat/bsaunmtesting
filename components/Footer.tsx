@@ -85,7 +85,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-seafoam-600 mt-8 pt-8 text-center text-seafoam-300">
-          <p>&copy; 2024 BSA UNM - Bangladeshi Students Association. Celebrating heritage, building community.</p>
+          <p>&copy; 2025 BSA UNM - Bangladeshi Students Association. Celebrating heritage, building community.</p>
         </div>
       </div>
     </footer>
