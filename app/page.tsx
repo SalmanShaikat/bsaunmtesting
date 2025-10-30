@@ -7,32 +7,44 @@ export default function Home() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-seafoam-50 via-white to-primary-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-seafoam-600 via-primary-500 to-cherry-500 bg-clip-text text-transparent">
-              Welcome to BSA University
-            </h1>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Where innovation meets tradition. Empowering students to become leaders 
-              through cutting-edge education, research, and community engagement.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-primary">
-                Explore Programs
-              </button>
-              <button className="border-2 border-seafoam-500 text-seafoam-600 hover:bg-seafoam-500 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
-                Campus Tour
-              </button>
-            </div>
-          </div>
-        </div>
-        
-        {/* Floating Elements */}
-        <div className="absolute top-10 left-10 w-20 h-20 bg-seafoam-300 rounded-full opacity-20 animate-bounce"></div>
-        <div className="absolute bottom-10 right-10 w-16 h-16 bg-primary-300 rounded-full opacity-30 animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-cherry-300 rounded-full opacity-25 animate-ping"></div>
-      </section>
+     // In your app/page.tsx - Update the hero section:
+<section className="relative bg-gradient-to-br from-seafoam-50 via-white to-primary-50 py-20">
+  <div className="container mx-auto px-4">
+    <div className="max-w-4xl mx-auto text-center">
+      {/* Updated Main Heading */}
+      <div className="mb-8">
+        <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-seafoam-600 via-primary-500 to-cherry-500 bg-clip-text text-transparent">
+          BSA UNM
+        </h1>
+        <p className="text-2xl text-gray-700 font-semibold mb-2">
+          Bangladeshi Students Association
+        </p>
+        <p className="text-lg text-gray-600">
+          University of New Mexico
+        </p>
+      </div>
+      
+      <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto">
+        Celebrating Bangladeshi heritage, building bridges between cultures, and empowering students 
+        through community, leadership, and shared success at UNM.
+      </p>
+      
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <button className="btn-primary">
+          Join Our Community
+        </button>
+        <button className="border-2 border-seafoam-500 text-seafoam-600 hover:bg-seafoam-500 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300">
+          Upcoming Events
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  {/* Floating Elements */}
+  <div className="absolute top-10 left-10 w-20 h-20 bg-seafoam-300 rounded-full opacity-20 animate-bounce"></div>
+  <div className="absolute bottom-10 right-10 w-16 h-16 bg-primary-300 rounded-full opacity-30 animate-pulse"></div>
+  <div className="absolute top-1/2 left-1/4 w-12 h-12 bg-cherry-300 rounded-full opacity-25 animate-ping"></div>
+</section>
 
       {/* Features Section */}
       <section className="py-20 bg-white">
