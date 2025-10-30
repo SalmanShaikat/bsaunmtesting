@@ -4,7 +4,6 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './features/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -12,6 +11,7 @@ module.exports = {
         'jungle-green': '#1a535c',
         'seafoam-green': '#4ecdc4',
         'unm-cherry': '#d90429',
+        'light-bg': '#f7fff7',
       },
       fontFamily: {
         sans: ['var(--font-inter)'],
