@@ -68,9 +68,9 @@ export default function Header() {
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <div className="w-6 h-0.5 bg-gray-700 mb-1.5 transition-transform duration-300"></div>
-            <div className="w-6 h-0.5 bg-gray-700 mb-1.5 transition-opacity duration-300"></div>
-            <div className="w-6 h-0.5 bg-gray-700 transition-transform duration-300"></div>
+            <div className={`w-6 h-0.5 bg-gray-700 mb-1.5 transition-transform duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
+            <div className={`w-6 h-0.5 bg-gray-700 mb-1.5 transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></div>
+            <div className={`w-6 h-0.5 bg-gray-700 transition-transform duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
           </button>
         </div>
 
@@ -82,7 +82,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-seafoam-600 font-medium py-2 transition-colors duration-300"
+                  className="text-gray-700 hover:text-seafoam-600 font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:bg-seafoam-50"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
