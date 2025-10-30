@@ -1,3 +1,4 @@
+// components/Header.tsx
 'use client'
 
 import { useState } from 'react'
@@ -7,7 +8,6 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navItems = [
-    { name: 'Home', href: '/' },
     { name: 'Events', href: '/events' },
     { name: 'People', href: '/people' },
     { name: 'Achievements', href: '/achievements' },
@@ -18,14 +18,35 @@ export default function Header() {
     <header className="bg-white/90 backdrop-blur-md shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-r from-seafoam-500 to-primary-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">BSA</span>
+          {/* Creative Logo */}
+          <Link href="/" className="flex items-center space-x-3 group">
+            {/* Main BSA Logo Container */}
+            <div className="relative">
+              {/* Background Shape */}
+              <div className="w-16 h-16 bg-gradient-to-br from-seafoam-500 to-primary-500 rounded-2xl flex items-center justify-center transform group-hover:rotate-3 transition-transform duration-300 shadow-lg">
+                {/* BSA Text */}
+                <span className="text-white font-bold text-2xl tracking-tight">BSA</span>
+              </div>
+              
+              {/* UNM Badge */}
+              <div className="absolute -bottom-1 -right-1 bg-cherry-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-md">
+                UNM
+              </div>
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-seafoam-600 to-primary-600 bg-clip-text text-transparent">
-              University
-            </span>
+
+            {/* Text Logo */}
+            <div className="flex flex-col">
+              <div className="flex items-baseline space-x-2">
+                <span className="text-2xl font-bold bg-gradient-to-r from-seafoam-600 to-primary-600 bg-clip-text text-transparent">
+                  BSA
+                </span>
+                <span className="text-gray-400 font-light text-lg">|</span>
+                <span className="text-lg font-semibold text-gray-700">UNM</span>
+              </div>
+              <p className="text-xs text-gray-500 font-medium mt-1">
+                Bangladeshi Students Association
+              </p>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -47,9 +68,9 @@ export default function Header() {
             className="md:hidden p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <div className="w-6 h-0.5 bg-gray-700 mb-1.5"></div>
-            <div className="w-6 h-0.5 bg-gray-700 mb-1.5"></div>
-            <div className="w-6 h-0.5 bg-gray-700"></div>
+            <div className="w-6 h-0.5 bg-gray-700 mb-1.5 transition-transform duration-300"></div>
+            <div className="w-6 h-0.5 bg-gray-700 mb-1.5 transition-opacity duration-300"></div>
+            <div className="w-6 h-0.5 bg-gray-700 transition-transform duration-300"></div>
           </button>
         </div>
 
