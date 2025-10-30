@@ -1,3 +1,4 @@
+// components/Footer.tsx
 export default function Footer() {
   return (
     <footer className="bg-gradient-to-r from-seafoam-800 to-primary-800 text-white mt-auto">
@@ -5,15 +6,22 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-seafoam-600 font-bold">BSA</span>
+            <div className="flex items-center space-x-3 mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-seafoam-500 to-primary-500 rounded-xl flex items-center justify-center">
+                <span className="text-white font-bold text-lg">BSA</span>
               </div>
-              <span className="text-xl font-bold">BSA University</span>
+              <div>
+                <div className="flex items-baseline space-x-2">
+                  <span className="text-xl font-bold">BSA</span>
+                  <span className="text-gray-300 font-light">|</span>
+                  <span className="text-lg font-semibold text-gray-200">UNM</span>
+                </div>
+                <p className="text-seafoam-200 text-sm">Bangladeshi Students Association</p>
+              </div>
             </div>
             <p className="text-seafoam-200 max-w-md">
-              Empowering students through innovative education, research, and community engagement. 
-              Building the leaders of tomorrow.
+              Building bridges between cultures, empowering Bangladeshi students at UNM, 
+              and celebrating our rich heritage through community, education, and shared success.
             </p>
           </div>
 
@@ -30,18 +38,18 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="font-semibold text-lg mb-4">Contact</h3>
+            <h3 className="font-semibold text-lg mb-4">Connect</h3>
             <ul className="space-y-2 text-seafoam-200">
-              <li>123 University Ave</li>
-              <li>Education City, EC 12345</li>
-              <li>info@bsauniversity.edu</li>
-              <li>(555) 123-4567</li>
+              <li>University of New Mexico</li>
+              <li>Albuquerque, NM</li>
+              <li>bsa@unm.edu</li>
+              <li>Follow us on social media</li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-seafoam-600 mt-8 pt-8 text-center text-seafoam-300">
-          <p>&copy; 2024 BSA University. All rights reserved.</p>
+          <p>&copy; 2024 BSA UNM - Bangladeshi Students Association. Celebrating heritage, building community.</p>
         </div>
       </div>
     </footer>
