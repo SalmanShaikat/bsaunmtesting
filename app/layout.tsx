@@ -1,17 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter, Georgia } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import { LayoutClient } from './components/layout/layout-client'
 
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
-})
-
-const georgia = Georgia({
-  weight: ['400', '600', '700'],
-  variable: '--font-georgia',
-  subsets: ['latin'],
 })
 
 export const metadata: Metadata = {
@@ -25,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${georgia.variable}`}>
+    <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased">
         <LayoutClient>
           {children}
