@@ -125,17 +125,22 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">Ready to Start Your Journey?</h2>
-          <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
-            Join our community of innovators, thinkers, and leaders. Apply now and take the first step toward your future.
-          </p>
-          <button className="btn-primary text-lg px-8 py-4">
-            Apply Now
-          </button>
-        </div>
-      </section>
+     <section className="py-20 bg-white">
+  <div className="container mx-auto px-4 text-center">
+    <h2 className="text-4xl font-bold text-gray-800 mb-6">Ready to Join Our Community?</h2>
+    <p className="text-gray-600 text-lg mb-8 max-w-2xl mx-auto">
+      Meet our amazing members, connect with fellow students, and become part of the BSA UNM family.
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <Link href="/people" className="btn-primary text-lg px-8 py-4 inline-block">
+        Meet Our People
+      </Link>
+      <Link href="/events" className="border-2 border-seafoam-500 text-seafoam-600 hover:bg-seafoam-500 hover:text-white font-semibold text-lg py-4 px-8 rounded-lg transition-all duration-300 inline-block">
+        View Events
+      </Link>
+    </div>
+  </div>
+</section>
 
       <Footer />
     </>
